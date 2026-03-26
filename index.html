@@ -1,11 +1,339 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi Perfil Profesional | Programador</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <!-- Background Canvas for Animation -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Dev<span>Profile</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Sobre Mí</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hola, soy <span class="highlight">Anderson Ramos</span></h1>
+                <p>Estudiante de Tecsup de la carrera Diseño y Desarrollo de Software</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#contact" class="btn btn-secondary">Contactar</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/perfil.jpeg" alt="Anderson Ramos">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Desarrollador de software con conocimientos en Kotlin, JavaScript, Node.js, PHP, Python y SQL,
+                        enfocado en la creación de aplicaciones móviles y sistemas web. Cuento con experiencia en
+                        desarrollo de soluciones tecnológicas y soporte técnico básico, incluyendo instalación y
+                        configuración de software.
+
+                        Me caracterizo por mi proactividad, responsabilidad y capacidad de trabajo en equipo, con una
+                        fuerte motivación por seguir creciendo profesionalmente y aportar soluciones innovadoras y
+                        funcionales.</p>
+                    <div class="info-list">
+                        <div class="info-item"><i class="fas fa-envelope"></i> anderson.ramos@tecsup.edu.pe</div>
+                        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Lima, Perú</div>
+                        <div class="info-item"><i class="fas fa-graduation-cap"></i> Estudiante de Diseño y Desarrollo
+                            de Software - Tecsup</div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>2+</h3>
+                        <p>Años de Estudio</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>5+</h3>
+                        <p>Proyectos Académicos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-grid">
+                <!-- Skill Item: HTML -->
+                <div class="skill-card">
+                    <i class="fab fa-html5 skill-icon" style="color: #e34f26;"></i>
+                    <h3>HTML5</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <!-- Skill Item: CSS -->
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt skill-icon" style="color: #1572b6;"></i>
+                    <h3>CSS3</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <!-- Skill Item: JavaScript -->
+                <div class="skill-card">
+                    <i class="fab fa-js skill-icon" style="color: #f7df1e;"></i>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 48%;"></div>
+                    </div>
+                    <span class="skill-percent">48%</span>
+                </div>
+                <!-- Skill Item: Kotlin -->
+                <div class="skill-card">
+                    <i class="fab fa-android skill-icon" style="color: #7f52ff;"></i>
+                    <h3>Kotlin</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 50%;"></div>
+                    </div>
+                    <span class="skill-percent">50%</span>
+                </div>
+                <!-- Skill Item: Node.js -->
+                <div class="skill-card">
+                    <i class="fab fa-node-js skill-icon" style="color: #68a063;"></i>
+                    <h3>Node.js</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 25%;"></div>
+                    </div>
+                    <span class="skill-percent">25%</span>
+                </div>
+                <!-- Skill Item: PHP -->
+                <div class="skill-card">
+                    <i class="fab fa-php skill-icon" style="color: #777bb4;"></i>
+                    <h3>PHP</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 45%;"></div>
+                    </div>
+                    <span class="skill-percent">45%</span>
+                </div>
+                <!-- Skill Item: Python -->
+                <div class="skill-card">
+                    <i class="fab fa-python skill-icon" style="color: #3776ab;"></i>
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 40%;"></div>
+                    </div>
+                    <span class="skill-percent">40%</span>
+                </div>
+                <!-- Skill Item: SQL -->
+                <div class="skill-card">
+                    <i class="fas fa-database skill-icon" style="color: #336791;"></i>
+                    <h3>SQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%;"></div>
+                    </div>
+                    <span class="skill-percent">60%</span>
+                </div>
+                <!-- Skill Item: React -->
+                <div class="skill-card">
+                    <i class="fab fa-react skill-icon" style="color: #61dafb;"></i>
+                    <h3>React</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 25%;"></div>
+                    </div>
+                    <span class="skill-percent">25%</span>
+                </div>
+                <!-- Skill Item: Git -->
+                <div class="skill-card">
+                    <i class="fab fa-git-alt skill-icon" style="color: #f05032;"></i>
+                    <h3>Git / GitHub</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <!-- Project 1: Classcraft -->
+                <div class="project-card" data-project="classcraft">
+                    <div class="project-img">
+                        <img src="img/classcraft.jpeg" alt="Classcraft">
+                    </div>
+                    <div class="project-info">
+                        <h3>🎮 Classcraft – Plataforma Educativa</h3>
+                        <p>Aplicación web inspirada en la gamificación educativa para mejorar la motivación estudiantil.</p>
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                        </div>
+                        <a href="javascript:void(0)" class="btn-link open-modal">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Hidden Data for Modal -->
+                    <div class="project-details" style="display:none;">
+                        <div class="modal-body">
+                            <p>Desarrollé una aplicación web inspirada en la gamificación educativa, orientada a mejorar la participación y motivación de los estudiantes mediante dinámicas de juego. Permite gestionar actividades, recompensas y el progreso de los usuarios dentro de un entorno interactivo.</p>
+                            <h4>🔧 Tecnologías:</h4>
+                            <p>PHP, JavaScript, HTML, CSS, MySQL</p>
+                            <h4>🎯 Logros:</h4>
+                            <ul>
+                                <li>Implementación de mecánicas de gamificación</li>
+                                <li>Mejora en la interacción y participación del usuario</li>
+                                <li>Desarrollo de una plataforma dinámica y funcional</li>
+                                <li>Aplicación de lógica de programación en un entorno educativo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Gestión de Bodega -->
+                <div class="project-card" data-project="bodega">
+                    <div class="project-img">
+                        <img src="img/bodega.png" alt="Gestión de Bodega">
+                    </div>
+                    <div class="project-info">
+                        <h3>🏪 App de Gestión de Bodega</h3>
+                        <p>Optimización del control de inventario y registro de ventas en tiempo real para negocios.</p>
+                        <div class="project-tags">
+                            <span>Kotlin</span>
+                            <span>SQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="javascript:void(0)" class="btn-link open-modal">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Hidden Data for Modal -->
+                    <div class="project-details" style="display:none;">
+                        <div class="modal-body">
+                            <p>Desarrollé una aplicación orientada a la gestión de bodegas, enfocada en optimizar el control de inventario y el registro de ventas. Permite administrar productos, monitorear el stock en tiempo real y mejorar la organización del negocio.</p>
+                            <h4>🔧 Tecnologías utilizadas:</h4>
+                            <p>Kotlin (desarrollo móvil), JavaScript, SQL (gestión de base de datos), HTML y CSS</p>
+                            <h4>🎯 Logros:</h4>
+                            <ul>
+                                <li>Mejora en el control y seguimiento del inventario</li>
+                                <li>Reducción de errores en el registro manual de productos</li>
+                                <li>Organización eficiente de la información del negocio</li>
+                                <li>Implementación de una solución funcional aplicable a entornos reales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Sistema Académico Integrador -->
+                <div class="project-card" data-project="integrador">
+                    <div class="project-img">
+                        <img src="img/sistema_academico.jpeg" alt="Sistema Académico">
+                    </div>
+                    <div class="project-info">
+                        <h3>💻 Proyecto Integrador – Gestión Académica</h3>
+                        <p>Sistema con IA para gestión de usuarios y generación de horarios de estudio personalizados.</p>
+                        <div class="project-tags">
+                            <span>Spring Boot</span>
+                            <span>Python</span>
+                            <span>IA</span>
+                        </div>
+                        <a href="javascript:void(0)" class="btn-link open-modal">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Hidden Data for Modal -->
+                    <div class="project-details" style="display:none;">
+                        <div class="modal-body">
+                            <p>Desarrollé un sistema académico para la gestión de usuarios, cursos y rendimiento estudiantil, permitiendo el control de notas, horarios y progreso.</p>
+                            <p>Se integró un módulo de inteligencia artificial que genera horarios de estudio personalizados según el rendimiento y la disponibilidad del estudiante, optimizando su organización.</p>
+                            <h4>🔧 Tecnologías:</h4>
+                            <p>Java (Spring Boot), Python (Django), Kotlin, MySQL/PostgreSQL, APIs REST, IA</p>
+                            <h4>🎯 Logros:</h4>
+                            <ul>
+                                <li>Integración de múltiples tecnologías</li>
+                                <li>Implementación de arquitectura distribuida</li>
+                                <li>Generación de horarios personalizados con IA</li>
+                                <li>Sistema funcional aplicado a un entorno real</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal Structure -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-project-title"></div>
+            <div id="modal-project-content"></div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Ponte en Contacto</h2>
+            <div class="contact-grid no-form">
+                <div class="contact-info">
+                    <h3>¿Por qué contactarme?</h3>
+                    <p>Estoy siempre abierto a nuevas oportunidades de aprendizaje y colaboración en proyectos
+                        interesantes. Si tienes alguna duda o propuesta, ¡no dudes en escribirme!
+                        Correo personal: ramosimananderson@gmail.com
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/anderson-ramos-iman/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Anderson-jrzzz" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/anderson.jrzz/?hl=es" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mi Perfil Profesional. Desarrollado con <i class="fas fa-heart" style="color: #e74c3c;"></i>
+                por Ramos Iman Anderson.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
+
 </html>
